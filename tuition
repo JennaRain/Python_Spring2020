@@ -1,0 +1,59 @@
+# Tuition Calculator
+# Calculate the total cost of tuition
+# Jenna R. Grimshaw
+# January 28, 2020
+
+# 1. Import modules
+# 2. Define variables
+# 3. Get inputs
+# 4. Define equation
+# 5. Print the answer
+
+# Import modules
+import math
+
+# Define variables
+research_hours = 300
+class_hours = 375
+
+# As you are writing a script for the 1st time, make sure that you throwing in print
+# statements CONSTANTLY to make sure everything is working.
+print(research_hours)
+print(class_hours)
+
+# Well which one was which? Can you remember? Lets get more specific.
+print("research: ", research_hours)
+print("class: ", class_hours)
+
+# Now we need to figure out how many hours of each type we are registering for. 
+# Because this is going to change each semester
+# we don't want to set this as a variable like we did above, 
+# But instead it being able to be changed each time
+# Like we did with the circumference example
+research_input = input("How many research hours are you taking? ")
+class_input = input("How many class hours are you taking? ")
+
+# Okay Lets do our equation:
+tuition = (research_input * research_hours) + (class_input * class_hours)
+
+# That didn't do anything... All we did was define tuition, but we didn't put it to use
+# So lets have it give us the answer
+print(tuition)
+
+# HOLY COW WHAT HAPPENED???
+# Ohhhh yeah, we did not convert our input into an integer did we???
+research_int = int(research_input)
+class_int = int(class_input)
+print(tuition)
+
+# Well that didn't change anything so now what?
+# Oh yeah, we did need to redefine the terms used in the tuition equation
+tuition = research_int * research_hours + class_int * class_hours
+print(tuition)
+
+# Better print statement:
+print("Your tuition will be: ", tuition)
+
+# Even better print statement:
+print("If you take ", research_input, "hours of research and ", class_input, \
+ "hours of classes, your tuition will be: $", tuition)
